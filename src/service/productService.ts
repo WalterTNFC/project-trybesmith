@@ -6,8 +6,9 @@ export async function createProduct(product: IProductsBody): Promise<ProductServ
   return { code: StatusCode.CREATED, data: newProduct };
 }
 
-export default createProduct;
+export async function getAllProducts() {
+  const getAll = await productModel.getAllProducts();
+  return { code: StatusCode.OK, data: getAll };
+}
 
-// export function createProduct(product: Product): { status: any; data: any; error: any; } | PromiseLike<{ status: any; data: any; error: any; }> {
-//   throw new Error('Function not implemented.');
-// }
+export default createProduct;
