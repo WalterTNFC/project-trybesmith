@@ -11,4 +11,9 @@ export async function createProduct(req: Request<unknown, unknown, IProductsBody
     : res.status(code).json(data);
 }
 
+export async function getAllProducts(_req: Request, res: Response) {
+  const { code, data } = await productServices.getAllProducts();
+  return res.status(code).json(data);
+}
+
 export default createProduct;
