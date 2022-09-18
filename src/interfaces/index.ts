@@ -36,3 +36,14 @@ export interface INewUser {
   token?: string,
   error?: string,
 }
+
+export interface IOrders {
+  id: number,
+  userId: number,
+  productId: number,
+}
+
+export interface IOrdersService {
+  code: StatusCode,
+  data: IOrders[],
+}
