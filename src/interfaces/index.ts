@@ -1,10 +1,11 @@
 export interface IProductsBody {
-  name: string;
-  amount: string;
+  name: string,
+  amount: string,
 }
 
 export interface IProducts extends IProductsBody {
   id: number,
+  userId?: number | null,
 }
 
 export enum StatusCode {
