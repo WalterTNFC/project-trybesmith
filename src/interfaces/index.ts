@@ -23,3 +23,16 @@ export interface ProductServiceData {
   data?: IProducts | IProducts[],
   error?: string,
 }
+
+export interface IUserBody {
+  username: string,
+  classe: string,
+  level: number,
+  password: string,
+}
+
+export interface INewUser {
+  code: StatusCode,
+  token?: string,
+  error?: string,
+}
